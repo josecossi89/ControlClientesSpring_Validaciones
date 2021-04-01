@@ -1,0 +1,29 @@
+package com.vzla.jc.domain;
+
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.*;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "persona")
+public class Persona implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idPersona;
+
+    @NotEmpty
+    private String nombre;
+
+    @NotEmpty
+    private String apellido;
+
+    @NotEmpty
+    private String email;
+    private String telefono;
+
+}
