@@ -1,8 +1,10 @@
 package com.vzla.jc.domain;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Data
@@ -23,6 +25,7 @@ public class Persona implements Serializable {
     private String apellido;
 
     @NotEmpty
+    @Email
     private String email;
     private String telefono;
 
